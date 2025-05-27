@@ -142,7 +142,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-[#6C63FF] to-[#5A52E5] rounded-lg flex items-center justify-center">
                 <Star className="w-4 h-4 text-white" />
               </div>
               <span className="text-xl font-bold">Abhinav S Pillai</span>
@@ -153,8 +153,8 @@ const Index = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`transition-colors duration-200 hover:text-green-400 ${
-                    activeSection === item.toLowerCase() ? 'text-green-400' : ''
+                  className={`transition-colors duration-200 hover:text-[#6C63FF] ${
+                    activeSection === item.toLowerCase() ? 'text-[#6C63FF]' : ''
                   }`}
                 >
                   {item}
@@ -171,7 +171,7 @@ const Index = () => {
               >
                 {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
               </Button>
-              <Button className="bg-green-500 hover:bg-green-600 text-white">
+              <Button className="bg-[#6C63FF] hover:bg-[#5A52E5] text-white">
                 Get in Touch
               </Button>
             </div>
@@ -187,7 +187,7 @@ const Index = () => {
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 Abhinav
                 <br />
-                <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#6C63FF] to-[#5A52E5] bg-clip-text text-transparent">
                   S Pillai
                 </span>
               </h1>
@@ -200,23 +200,23 @@ const Index = () => {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
+              <Button className="bg-[#6C63FF] hover:bg-[#5A52E5] text-white px-8 py-3">
                 <Download className="w-4 h-4 mr-2" />
                 View Resume
               </Button>
-              <Button variant="outline" className="px-8 py-3 border-green-400 text-green-400 hover:bg-green-400 hover:text-white">
+              <Button variant="outline" className="px-8 py-3 border-[#6C63FF] text-[#6C63FF] hover:bg-[#6C63FF] hover:text-white">
                 Explore Projects
               </Button>
             </div>
 
             <div className="flex space-x-6">
-              <a href="https://github.com" className="text-gray-400 hover:text-green-400 transition-colors">
+              <a href="https://github.com" className="text-gray-400 hover:text-[#6C63FF] transition-colors">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://linkedin.com" className="text-gray-400 hover:text-green-400 transition-colors">
+              <a href="https://linkedin.com" className="text-gray-400 hover:text-[#6C63FF] transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="mailto:abhinavspillai2005@gmail.com" className="text-gray-400 hover:text-green-400 transition-colors">
+              <a href="mailto:abhinavspillai2005@gmail.com" className="text-gray-400 hover:text-[#6C63FF] transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
@@ -224,20 +224,21 @@ const Index = () => {
 
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-80 h-80 bg-gradient-to-br from-green-400/20 to-green-600/20 rounded-full blur-3xl absolute inset-0"></div>
+              <div className="w-80 h-80 bg-gradient-to-br from-[#6C63FF]/20 to-[#5A52E5]/20 rounded-full blur-3xl absolute inset-0"></div>
               <div className="relative w-72 h-72 bg-gray-800 rounded-2xl overflow-hidden border border-gray-700">
-                <div className="absolute inset-0 bg-gradient-to-br from-green-400/10 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="text-sm text-gray-400">Profile Picture</div>
-                  <div className="text-xs text-gray-500 mt-1">Placeholder for personal branding</div>
-                </div>
+                <img 
+                  src="/lovable-uploads/e5d35eb9-05f3-4d72-919a-426e4ba66615.png" 
+                  alt="Abhinav S Pillai"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#6C63FF]/10 to-transparent"></div>
               </div>
             </div>
           </div>
         </div>
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-6 h-6 text-green-400" />
+          <ChevronDown className="w-6 h-6 text-[#6C63FF]" />
         </div>
       </section>
 
@@ -288,7 +289,7 @@ const Index = () => {
               <Card key={index} className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} hover:scale-105 transition-transform duration-300`}>
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="p-2 bg-green-500/20 rounded-lg text-green-400">
+                    <div className="p-2 bg-[#6C63FF]/20 rounded-lg text-[#6C63FF]">
                       {skill.icon}
                     </div>
                     <h3 className="font-semibold">{skill.category}</h3>
@@ -316,10 +317,10 @@ const Index = () => {
               <Card key={index} className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} hover:scale-105 transition-all duration-300 group`}>
                 <CardContent className="p-6">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-semibold group-hover:text-green-400 transition-colors">
+                    <h3 className="text-xl font-semibold group-hover:text-[#6C63FF] transition-colors">
                       {project.title}
                     </h3>
-                    <Badge className={project.status === "Completed" ? "bg-green-500" : "bg-yellow-500"}>
+                    <Badge className={project.status === "Completed" ? "bg-[#6C63FF]" : "bg-yellow-500"}>
                       {project.status}
                     </Badge>
                   </div>
@@ -336,7 +337,7 @@ const Index = () => {
                       <Github className="w-4 h-4 mr-2" />
                       Code
                     </Button>
-                    <Button size="sm" className="bg-green-500 hover:bg-green-600 flex-1">
+                    <Button size="sm" className="bg-[#6C63FF] hover:bg-[#5A52E5] flex-1">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Demo
                     </Button>
@@ -357,7 +358,7 @@ const Index = () => {
               <Card key={index} className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} hover:scale-105 transition-transform duration-300 text-center`}>
                 <CardContent className="p-6">
                   <div className="flex justify-center mb-4">
-                    <div className="p-3 bg-green-500/20 rounded-lg text-green-400">
+                    <div className="p-3 bg-[#6C63FF]/20 rounded-lg text-[#6C63FF]">
                       {service.icon}
                     </div>
                   </div>
@@ -385,8 +386,8 @@ const Index = () => {
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <div className="p-2 bg-green-500/20 rounded-lg">
-                    <Mail className="w-5 h-5 text-green-400" />
+                  <div className="p-2 bg-[#6C63FF]/20 rounded-lg">
+                    <Mail className="w-5 h-5 text-[#6C63FF]" />
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
@@ -395,8 +396,8 @@ const Index = () => {
                 </div>
                 
                 <div className="flex items-center space-x-4">
-                  <div className="p-2 bg-green-500/20 rounded-lg">
-                    <Phone className="w-5 h-5 text-green-400" />
+                  <div className="p-2 bg-[#6C63FF]/20 rounded-lg">
+                    <Phone className="w-5 h-5 text-[#6C63FF]" />
                   </div>
                   <div>
                     <p className="font-medium">Phone</p>
@@ -413,7 +414,7 @@ const Index = () => {
                     <label className="block text-sm font-medium mb-2">Name</label>
                     <input 
                       type="text" 
-                      className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-green-400 focus:border-transparent`}
+                      className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6C63FF] focus:border-transparent`}
                       placeholder="Your name"
                     />
                   </div>
@@ -421,7 +422,7 @@ const Index = () => {
                     <label className="block text-sm font-medium mb-2">Email</label>
                     <input 
                       type="email" 
-                      className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-green-400 focus:border-transparent`}
+                      className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6C63FF] focus:border-transparent`}
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -429,11 +430,11 @@ const Index = () => {
                     <label className="block text-sm font-medium mb-2">Message</label>
                     <textarea 
                       rows={4}
-                      className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-green-400 focus:border-transparent`}
+                      className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6C63FF] focus:border-transparent`}
                       placeholder="Tell me about your project..."
                     />
                   </div>
-                  <Button className="w-full bg-green-500 hover:bg-green-600 text-white">
+                  <Button className="w-full bg-[#6C63FF] hover:bg-[#5A52E5] text-white">
                     Send Message
                   </Button>
                 </form>
@@ -447,19 +448,19 @@ const Index = () => {
       <footer className={`py-8 px-4 border-t ${isDark ? 'border-gray-700 bg-gray-900' : 'border-gray-200 bg-white'}`}>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <div className="w-6 h-6 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
+            <div className="w-6 h-6 bg-gradient-to-br from-[#6C63FF] to-[#5A52E5] rounded-lg flex items-center justify-center">
               <Star className="w-3 h-3 text-white" />
             </div>
             <span className="font-semibold">Abhinav S Pillai</span>
           </div>
           <div className="flex space-x-6">
-            <a href="https://github.com" className="text-gray-400 hover:text-green-400 transition-colors">
+            <a href="https://github.com" className="text-gray-400 hover:text-[#6C63FF] transition-colors">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com" className="text-gray-400 hover:text-green-400 transition-colors">
+            <a href="https://linkedin.com" className="text-gray-400 hover:text-[#6C63FF] transition-colors">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="mailto:abhinavspillai2005@gmail.com" className="text-gray-400 hover:text-green-400 transition-colors">
+            <a href="mailto:abhinavspillai2005@gmail.com" className="text-gray-400 hover:text-[#6C63FF] transition-colors">
               <Mail className="w-5 h-5" />
             </a>
           </div>
