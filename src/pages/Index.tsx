@@ -180,8 +180,15 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-20">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-20 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-[#6C63FF]/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#5A52E5]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-[#6C63FF]/5 to-[#5A52E5]/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
@@ -223,15 +230,49 @@ const Index = () => {
           </div>
 
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="w-80 h-80 bg-gradient-to-br from-[#6C63FF]/20 to-[#5A52E5]/20 rounded-full blur-3xl absolute inset-0"></div>
-              <div className="relative w-72 h-72 bg-gray-800 rounded-2xl overflow-hidden border border-gray-700">
-                <img 
-                  src="/lovable-uploads/e5d35eb9-05f3-4d72-919a-426e4ba66615.png" 
-                  alt="Abhinav S Pillai"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#6C63FF]/10 to-transparent"></div>
+            {/* Backdrop Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#6C63FF]/20 via-transparent to-[#5A52E5]/20 rounded-full blur-3xl scale-150"></div>
+            
+            {/* Floating Elements */}
+            <div className="absolute top-10 left-10 w-4 h-4 bg-[#6C63FF] rounded-full opacity-60 animate-pulse"></div>
+            <div className="absolute bottom-20 right-5 w-3 h-3 bg-[#5A52E5] rounded-full opacity-40 animate-pulse delay-500"></div>
+            <div className="absolute top-32 right-20 w-2 h-2 bg-[#6C63FF] rounded-full opacity-50 animate-pulse delay-1000"></div>
+            
+            {/* Main Profile Container */}
+            <div className="relative group">
+              {/* Outer Glow Ring */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#6C63FF]/30 to-[#5A52E5]/30 rounded-full blur-lg group-hover:blur-xl transition-all duration-500 animate-pulse"></div>
+              
+              {/* Middle Ring */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-[#6C63FF]/20 to-[#5A52E5]/20 rounded-full blur-md"></div>
+              
+              {/* Profile Image Container */}
+              <div className="relative w-80 h-80 group-hover:scale-105 transition-transform duration-500">
+                {/* Background Blend */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#6C63FF]/10 to-[#5A52E5]/10 rounded-2xl backdrop-blur-sm"></div>
+                
+                {/* Image Container */}
+                <div className="relative w-full h-full rounded-2xl overflow-hidden border border-[#6C63FF]/20 backdrop-blur-md bg-gray-800/40">
+                  <img 
+                    src="/lovable-uploads/e5d35eb9-05f3-4d72-919a-426e4ba66615.png" 
+                    alt="Abhinav S Pillai"
+                    className="w-full h-full object-cover"
+                  />
+                  
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#6C63FF]/20 via-transparent to-[#5A52E5]/20"></div>
+                  
+                  {/* Shimmer Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 skew-x-12"></div>
+                </div>
+                
+                {/* Floating Tech Icons */}
+                <div className="absolute -top-6 -right-6 w-12 h-12 bg-[#6C63FF]/20 backdrop-blur-md rounded-xl border border-[#6C63FF]/30 flex items-center justify-center animate-bounce">
+                  <Brain className="w-6 h-6 text-[#6C63FF]" />
+                </div>
+                <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-[#5A52E5]/20 backdrop-blur-md rounded-xl border border-[#5A52E5]/30 flex items-center justify-center animate-bounce delay-500">
+                  <Eye className="w-6 h-6 text-[#5A52E5]" />
+                </div>
               </div>
             </div>
           </div>
